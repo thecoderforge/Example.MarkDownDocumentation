@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace TheCoderForge.Example.MarkDownDocumentation
 {
+    /// <summary>
+    /// summary goes here
+    /// </summary>
+    /// <remarks> go here</remarks>
     public enum ExampleEnum
     {
         Sunday = 0,

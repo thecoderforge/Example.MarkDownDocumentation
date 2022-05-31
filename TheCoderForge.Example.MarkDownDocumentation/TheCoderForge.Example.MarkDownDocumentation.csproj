@@ -1,23 +1,45 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net5.0</TargetFramework>
+		<DocumentationFile>f:\Repos\TheCoderForge\Example.MarkDownDocumentation\TheCoderForge.Example.MarkDownDocumentation\TheCoderForge.Example.MarkDownDocumentation.xml</DocumentationFile>
 
-  <ItemGroup>
-    <PackageReference Include="DefaultDocumentation" Version="0.8.1">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="_Documentation\" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="DefaultDocumentation" Version="0.7.9">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Folder Include="_Documentation\" />
+	</ItemGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
-		<DocumentationFile>F:\Repos\TheCoderForge\TheCoderForge.Net\TheCoderForge.Net\TheCoderForge.Net.xml</DocumentationFile>
-		<DefaultDocumentationFolder>_Documentation</DefaultDocumentationFolder>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!--DefaultDocumentation documentation: https://opensourcelibs.com/lib/defaultdocumentation -->
+
+		<DefaultDocumentationFolder>_Documentation</DefaultDocumentationFolder>
+		<DefaultDocumentationAssemblyPageName>MyAssembly</DefaultDocumentationAssemblyPageName>
+		<DefaultDocumentationFileNameMode>Name</DefaultDocumentationFileNameMode>
+		<!--
+			the way to generate file name for each page, FullName by default.
+			FullName: use the fully qualified name of each member
+			Name: remove the namespace (collisions can happen if there is multiple types with the same name in different namespaces)
+			Md5: use a Md5 of the full name of each member to produce shorter name, collisions can happen
+			NameAndMd5Mix: remove the namespace and use a Md5 for parameters
+			
+			NOTE: this seems to be broken in 0.8.1, but works in 0.7.9
+			-->
+		<DefaultDocumentationGeneratedPages>Assembly, Types, Members</DefaultDocumentationGeneratedPages>
+	</PropertyGroup>
+
 
 </Project>

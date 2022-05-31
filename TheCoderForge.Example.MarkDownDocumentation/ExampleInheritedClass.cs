@@ -8,5 +8,7 @@ namespace TheCoderForge.Example.MarkDownDocumentation
 {
     class ExampleInheritedClass
     {
+
+        // need to use <inheritdoc> and <include> in xml docs
     }
 }

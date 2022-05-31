@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TheCoderForge.Example.MarkDownDocumentation</name>
+    </assembly>
+    <members>
+        <member name="T:TheCoderForge.Example.MarkDownDocumentation.ExampleEnum">
+            <summary>
+            summary goes here
+            </summary>
+            <remarks> go here</remarks>
+        </member>
+        <member name="T:TheCoderForge.Example.MarkDownDocumentation.ExamplePublicClass">
+            <summary>
+                this is a public class
+            </summary>
+            <remarks>
+            This is the remark section.
+            Here are some examples of how different tags can be used within it and other sections.
+            We can Link to other documents: <see cref="T:TheCoderForge.Example.MarkDownDocumentation.ExampleEnum">ExampleEnum</see>
+            We can Link to external URLs: <see href="https://github.com">GitHub</see>
+            </remarks>
+        </member>
+        <member name="P:TheCoderForge.Example.MarkDownDocumentation.ExamplePublicClass.IntegerProperty">
+            <summary>
+            summary goes here</summary>
+            <remarks>
+            This is the remark section.
+            Here are some examples of how different tags can be used within it and other sections.
+            W
+            </remarks>
+        </member>
+        <member name="M:TheCoderForge.Example.MarkDownDocumentation.ExamplePublicClass.FunctionWithClass(TheCoderForge.Example.MarkDownDocumentation.ExamplePublicClass,System.Int32)">
+            <summary>Summary for method</summary>
+            <param name="inputObject">summary for parameter</param>
+            <param name="integerParam">summary for second parameter</param>
+            <returns>blah</returns>
+            <value>The value of this element is displayed in IntelliSense in Visual Studio</value>
+        </member>
+    </members>
+</doc>
