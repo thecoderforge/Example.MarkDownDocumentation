@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DefaultDocumentation" Version="0.8.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="_Documentation\" />
+  </ItemGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net5.0|AnyCPU'">
+		<DocumentationFile>F:\Repos\TheCoderForge\TheCoderForge.Net\TheCoderForge.Net\TheCoderForge.Net.xml</DocumentationFile>
+		<DefaultDocumentationFolder>_Documentation</DefaultDocumentationFolder>
+	</PropertyGroup>
+
+</Project>
